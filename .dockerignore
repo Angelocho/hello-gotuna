@@ -1,0 +1,8 @@
+Dockerfile
+compose.yaml
+.*
+!*.go
+!*.mod
+!*.sum
+!*.sh
+!/examples/fullapp/

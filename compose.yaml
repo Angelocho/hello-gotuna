@@ -1,0 +1,7 @@
+version: "3"
+services:
+  appgotuna:
+    build: .
+    image: appgotuna:latest
+    ports:
+      - "8888:8888"
