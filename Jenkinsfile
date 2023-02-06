@@ -20,6 +20,7 @@ pipeline {
                 steps {
                     timestamps {
                         sh 'docker-compose up -d'
+			echo "\033[1;32m[Success] \033[0m $1"
                     }
                 }
         }
