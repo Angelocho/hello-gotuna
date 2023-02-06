@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    options { timestamps() }
+    options { timestamps() 
+	ansiColor('xterm')	
+	}
     stages {
         
             stage('TestingDocker') {
