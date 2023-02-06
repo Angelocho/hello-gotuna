@@ -4,25 +4,26 @@ pipeline {
     stages {
         
             stage('TestingDocker') {
-                timestamps {
-                    steps {
+                steps {
+                        timestamps {
                         sh 'docker-compose config'
-                    }
+                        }
                 }
             }
             stage('building') {
-                timestamps {
-                    steps {
+                steps {
+                    timestamps {
                         sh 'docker-compose build'
                     }
                 }
+                
             }
 	        stage('starting') {
-	            timestamps {
-                    steps {
+                steps {
+                    timestamps {
                         sh 'docker-compose up -d'
                     }
-	            }
+                }
         }
         
     }
