@@ -19,7 +19,7 @@ pipeline {
 	        stage('starting') {
                 steps {
                        sh '''docker-compose up -d
-                       docker-compose logs -t -tail=10'''
+                       docker-compose logs -t --tail=10'''
                        
 		       echo '\033[1;32m[Success] \033[0m'
                 }
